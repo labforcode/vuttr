@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Vuttr.Domain.Core.DomainObjects.Entities;
 using Vuttr.Domain.Core.DomainObjects.Interfaces;
-using Vuttr.Domain.Entities.Tags;
+using Vuttr.Domain.Entities.FerramentasTags;
 
 namespace Vuttr.Domain.Entities.Ferramentas
 {
@@ -14,7 +14,7 @@ namespace Vuttr.Domain.Entities.Ferramentas
             Descricao = descricao;
         }
 
-        public Ferramenta() { }
+        protected Ferramenta() { }
 
         public string Nome { get; private set; }
 
@@ -22,6 +22,7 @@ namespace Vuttr.Domain.Entities.Ferramentas
 
         public string Descricao { get; private set; }
 
-        public ICollection<Tag> Tags { get; set; }
+        //EF Core
+        public virtual ICollection<FerramentaTag> FerramentaTags { get; set; }
     }
 }
