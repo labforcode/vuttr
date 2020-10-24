@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Vuttr.Infra.CrossCutting.IoC;
 
 namespace Vuttr.WebApi
 {
@@ -19,6 +20,7 @@ namespace Vuttr.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            Injector(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +41,11 @@ namespace Vuttr.WebApi
             {
                 endpoints.MapControllers();
             });
+        }
+
+        private void Injector(IServiceCollection services)
+        {
+            BootstraperContainerDI.Injector(services, Configuration);
         }
     }
 }
