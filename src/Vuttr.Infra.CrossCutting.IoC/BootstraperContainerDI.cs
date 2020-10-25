@@ -17,9 +17,9 @@ namespace Vuttr.Infra.CrossCutting.IoC
 
             //EventsContainerDI.EventsRegister(services);
 
-            //RepositoryEFContainerDI.RepositoryInject(services);
+            RepositoryEFCoreContainerDI.RepositoryInject(services);
 
-            //RepositoryDapperContainerDI.RepositoryInject(services);
+            RepositoryDapperContainerDI.RepositoryInject(services);
 
             //ServiceContainerDI.ServicesInject(services);
         }
