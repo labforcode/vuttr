@@ -21,7 +21,7 @@ namespace Vuttr.Infra.CrossCutting.IoC
 
             RepositoryDapperContainerDI.RepositoryInject(services);
 
-            //ServiceContainerDI.ServicesInject(services);
+            AppServiceContainerDI.AppServiceInject(services);
         }
     }
 }

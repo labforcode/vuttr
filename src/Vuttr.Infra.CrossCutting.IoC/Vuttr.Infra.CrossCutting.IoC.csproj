@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Vuttr.Application\Vuttr.Application.csproj" />
     <ProjectReference Include="..\Vuttr.Infra.Data\Vuttr.Infra.Data.csproj" />
   </ItemGroup>
 
