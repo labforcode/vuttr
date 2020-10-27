@@ -28,6 +28,10 @@ namespace Vuttr.Infra.Data.Mappings.Ferramentas
                    .HasColumnName("descricao")
                    .HasColumnType("varchar(400)")
                    .IsRequired();
+
+            builder.Property(c => c.DataCadastro)
+                   .HasColumnName("data_cadastro")
+                   .IsRequired();
         }
     }
 }

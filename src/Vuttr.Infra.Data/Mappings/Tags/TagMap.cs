@@ -18,6 +18,10 @@ namespace Vuttr.Infra.Data.Mappings.Tags
                    .HasColumnName("nome")
                    .HasColumnType("varchar(100)")
                    .IsRequired();
+
+            builder.Property(c => c.DataCadastro)
+                   .HasColumnName("data_cadastro")
+                   .IsRequired();
         }
     }
 }
